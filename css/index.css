@@ -1,75 +1,164 @@
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
     overflow: hidden;
 }
 *, *::before, *::after{
+    margin: 0;
+    padding: 0;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing: border-box;
 }
-#cas{
-    position: absolute;
+body{
+    /* background-image: url(../images/zhu.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+    position: relative;
+    /* background:url(../images/bg1.jpg) no-repeat bottom right;  */
+    /* background:url(../images/bg2.jpg) no-repeat top right;  */
+    background:url(../images/bg5.jpg) no-repeat bottom right; 
+    background-size:100%;
 }
-.container {
-    position: absolute;
-    top:0;
-    bottom:0;
-    z-index: 1;
-    width: 100%;
-    
-}
-.tabs_head{
-    width:800px;
-    height:70px;
-    margin:auto;
-}
-.tabs_head>*{
-    color:#554348;
-    font-size: 20px;
-    display: block;
-    float:left;
-}
-.tabs_head a{
-    width:320px;
-    line-height: 30px;
-    margin:20px 0;
-    color:#554348;
-    cursor: pointer;
-   /*  -webkit-transition: all 0.6s;
-    -o-transition: all 0.6s;
-       transition: all 0.6s; */
-}
-.tabs_head a.active, .tabs_head a:hover{
-    color:#93b7be;
-    border-bottom:1px #93b7be solid;
-}
-.tabs_head a:first-child{
-    text-align: right;
-}
-.tabs_head span{
-    width:160px;
+
+.poem{
+    margin-top:49px;
     text-align: center;
 }
+    .poem .poem_title{
+        display: inline-block;
+        width: 50px;
+        border:4px solid #f00;
+        text-align: center;
+        height:100px;
+        padding:5px 0;
+        vertical-align: top;
+    }
+        .poem .poem_title h3{
+        display: inline-block;
+        font-size: 18px;
+        width: 32px;
+        height:100%;
+        padding:0 5px;
+        color:#262626;
+        border:2px solid #f00;
+    }
+    .poem .poem_content{
+        margin-top:41px;
+        display:inline-block;
+        margin-right:36px;
+        overflow: hidden;
+        height: 160px;
+        width: 200px;
+    }
+        .poem .poem_content span{
+            display: block;
+            width:100%;
+            height:100%;
+            background:transparent url(../images/poem.png) no-repeat top left; 
+            background-size: auto 90%;
+        }
+    /* 文字竖排 */
+    .verticle-mode {
+        writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;      
+        writing-mode: vertical-rl;
+    }
+    /* IE7比较弱，需要做点额外的动作 */
+    .verticle-mode {
+        *width: 120px;
+    }
+    .verticle-mode p {
+        *display: inline;
+        *writing-mode: tb-rl;
+    }
 
-
-.tabs_center{
-    width:800px;
-    height:500px;
-    margin: auto;
-    position: relative;
-    color:#747578;
-    font-size: 14px;
-    background: hsla(180, 62%, 90%, .8);
-    /* background: hsla(0,0%,100%,.3); */
-    overflow: hidden;
-    border-radius: 6px;
-}
-/* .tabs_center::before{
-    content: '';
+.content{
     position: absolute;
-    top:0;right:0;bottom: 0;left:0;
-    filter:blur(20px);
-    margin:-30px;
-} */
+    top:70%;
+    right:0;
+    left:0;
+    height:120px;
+    margin-top:-50px;
+    background-color:rgba(0, 0, 0, .5);
+    text-align: center;
+}
+.content_nav{
+    height:100%;
+    display: inline-block;
+    text-align: center;
+    /* margin-right: 40%; */
+    color:#000;
+    zoom:1;
+}
+    .content_nav a{
+        display: inline-block;
+        text-decoration: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius: 4px
+    }
+    .content_nav:after{
+        content:'';
+        display: block;
+        height:0;
+        visibility: hidden;
+        clear: both;
+    }
+    .content_nav li{
+        float: left;
+        display: block;
+        list-style:none;
+    }
+    .content_nav>li{
+        height:100%;
+        margin-right:16px;
+    }
+    /* .content_nav>li:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    } */
+        .content_nav>li>a{
+            width:20px;
+            font-size: 16px;
+            color:#fff;
+            background-color: #f00;
+            margin-top:12px;
+            padding-bottom:2px;
+            vertical-align: top;
+            /* vertical-align: middle; */
+        }
+
+.content_subnav{
+    display: inline-block;
+    /* vertical-align: middle; */
+    height:100%;
+    margin-left:3px;
+    vertical-align: top;
+}
+    .content_subnav>li{
+        height:100%;
+        margin-right:8px;
+    }
+    .content_subnav>li:last-child{
+        margin-right:0;
+    }
+    /* .content_subnav>li:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    } */
+        .content_subnav>li>a{
+            width:24px;
+            font-size: 16px;
+            color:#fff;
+            background-color: #000;
+            /* vertical-align: middle; */
+            margin-top:12px;
+            padding-bottom:2px;
+        }
+    
