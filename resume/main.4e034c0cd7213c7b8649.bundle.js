@@ -159,9 +159,14 @@ var SkillComponent = (function () {
     SkillComponent.prototype.ngOnInit = function () {
     };
     SkillComponent.prototype.toggle = function () {
-        var contentElement = this.elementRef.nativeElement.querySelector('ul');
-        this.height = contentElement ? (contentElement.clientHeight + 33) + 'px' : '168px';
         this.isOpen = !this.isOpen;
+        if (this.isOpen) {
+            var contentElement = this.elementRef.nativeElement.querySelector('ul');
+            this.height = contentElement ? (contentElement.clientHeight + 33) + 'px' : '168px';
+        }
+        else {
+            this.height = "0";
+        }
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
@@ -235,4 +240,4 @@ module.exports = __webpack_require__(303);
 /***/ })
 
 },[520]);
-//# sourceMappingURL=main.1949b5c0d356bd050073.bundle.map
+//# sourceMappingURL=main.4e034c0cd7213c7b8649.bundle.map
